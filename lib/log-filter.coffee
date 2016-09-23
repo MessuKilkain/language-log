@@ -148,7 +148,7 @@ class LogFilter
       regexpFlags = ''
       if text[0] is '!'
         regexpPattern = "^((?!#{text.substr(1)}).)*$"
-      if atom.config.get('language-log.caseInsensitive')
+      if !atom.config.get('language-log.caseSensitive')
         regexpFlags += 'i'
 
       if regexpFlags

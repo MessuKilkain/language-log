@@ -10,9 +10,9 @@ module.exports = LanguageLog =
     tail:
       type: 'boolean'
       default: false
-    caseInsensitive:
+    caseSensitive:
       type: 'boolean'
-      default: true
+      default: false
     foldPosition:
       type: 'string'
       default: 'end-of-line'

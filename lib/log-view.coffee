@@ -122,7 +122,7 @@ class LogView extends View
     @tail()
 
   toggleCaseSensitivity: ->
-    atom.config.set('language-log.caseInsensitive', !atom.config.get('language-log.caseInsensitive'))
+    atom.config.set('language-log.caseSensitive', !atom.config.get('language-log.caseSensitive'))
     @updateButtons()
     @confirm()
 
@@ -133,7 +133,7 @@ class LogView extends View
 
   updateButtons: ->
     @tailButton.toggleClass('selected', atom.config.get('language-log.tail'))
-    @caseSensistiveButton.toggleClass('selected', !atom.config.get('language-log.caseInsensitive'))
+    @caseSensistiveButton.toggleClass('selected', atom.config.get('language-log.caseSensitive'))
     @levelVerboseButton.toggleClass('selected', @settings.verbose)
     @levelInfoButton.toggleClass('selected', @settings.info)
     @levelDebugButton.toggleClass('selected', @settings.debug)
